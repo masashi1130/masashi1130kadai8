@@ -13,13 +13,13 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            Orange(currentValue: $currentValue)
+            OrangeView(currentValue: $currentValue)
                 .tabItem {
                     Label("Item", systemImage: "")
                 }
                 .tag(0)
             
-            Cyan(currentValue: $currentValue)
+            CyanView(currentValue: $currentValue)
                 .tabItem {
                     Label("Item", systemImage: "")
                 }
@@ -32,7 +32,7 @@ struct ContentView: View {
     ContentView()
 }
 
-struct Orange: View {
+struct OrangeView: View {
     
     @Binding var currentValue: Double
     
@@ -41,7 +41,7 @@ struct Orange: View {
     }
 }
 
-struct Cyan: View {
+struct CyanView: View {
     
     @Binding var currentValue: Double
     
